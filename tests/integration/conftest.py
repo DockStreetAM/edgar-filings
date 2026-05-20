@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import os
 import re
+from collections.abc import Iterator
 
 import pytest
 
@@ -54,8 +55,9 @@ def beta_ccc() -> str:
 
 
 @pytest.fixture
-def beta_client(beta_filer_token: str, beta_user_token: str) -> Client:
-    return Client(beta_filer_token, beta_user_token, mode="test", host=BETA_HOST)
+def beta_client(beta_filer_token: str, beta_user_token: str) -> Iterator[Client]:
+    with Client(beta_filer_token, beta_user_token, mode="test", host=BETA_HOST) as client:
+        yield client
 
 
 def _scrub_request_body(request: object) -> object:
