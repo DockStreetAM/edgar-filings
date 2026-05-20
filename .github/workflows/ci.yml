@@ -7,10 +7,11 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: ["3.10", "3.11", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v6
@@ -28,5 +29,5 @@ jobs:
         run: uv run mypy src/edgar_filings
       - name: Unit tests
         run: uv run pytest tests/unit -q
-      - name: Integration replay
-        run: uv run pytest tests/integration -q || true
+      - name: Integration replay (VCR cassettes, no network)
+        run: uv run pytest tests/integration -q
