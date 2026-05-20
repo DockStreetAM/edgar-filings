@@ -1,0 +1,49 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - api-bravo.edgarfiling.sec.gov
+      User-Agent:
+      - python-httpx/0.28.1
+      authorization:
+      - Bearer REDACTED
+    method: GET
+    uri: https://api-bravo.edgarfiling.sec.gov/status
+  response:
+    body:
+      string: '{"tracking":"d7da643add2b844237ccf848f50de4e0","locator":"b5nth","condition":"ACCEPTING","message":"EDGAR
+        is available because EDGAR is reporting that it is operational and within
+        operating hours."}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '198'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2026 21:25:07 GMT
+      Expires:
+      - Wed, 20 May 2026 21:25:07 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - 239e208d8f2ab29389de240a37ed6241=00ff6ed3ca04aba085c05eeecba4bc23; path=/;
+        HttpOnly; Secure; SameSite=Strict
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains ; preload
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1

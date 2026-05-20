@@ -1,0 +1,174 @@
+interactions:
+- request:
+    body: '<?xml version=''1.0'' encoding=''UTF-8''?>
+
+      <cor:edgarSubmission xmlns:cor="http://www.sec.gov/edgar/coreg" xmlns:com="http://www.sec.gov/edgar/common"><cor:liveTestFlag>TEST</cor:liveTestFlag><cor:flags><com:confirmingCopyFlag>false</com:confirmingCopyFlag><com:returnCopyFlag>false</com:returnCopyFlag></cor:flags><cor:submissionType>13F-HR</cor:submissionType><cor:filer><cor:filerId>0003003396</cor:filerId><cor:filerCcc>REDACTED</cor:filerCcc></cor:filer><cor:sros><com:sroId>NONE</com:sroId></cor:sros><cor:periodOfReport>12-31-2025</cor:periodOfReport><cor:documents><com:document><com:conformedName>primary_doc.xml</com:conformedName><com:conformedDocumentType>13F-HR</com:conformedDocumentType><com:contents>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48ZWRnYXJTdWJtaXNzaW9uPjxoZWFkZXJEYXRhPjxmaWxlckluZm8+PGZpbGVyPjxjcmVkZW50aWFscz48Y2lrPjAwMDMwMDMzOTY8L2Npaz48L2NyZWRlbnRpYWxzPjwvZmlsZXI+PC9maWxlckluZm8+PC9oZWFkZXJEYXRhPjwvZWRnYXJTdWJtaXNzaW9uPg==</com:contents></com:document></cor:documents></cor:edgarSubmission>'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1028'
+      Content-Type:
+      - application/xml
+      Host:
+      - api-bravo.edgarfiling.sec.gov
+      User-Agent:
+      - python-httpx/0.28.1
+      authorization:
+      - Bearer REDACTED
+    method: POST
+    uri: https://api-bravo.edgarfiling.sec.gov/submission/single/test
+  response:
+    body:
+      string: '{"tracking":"1fc05333d37b3b6272f13f5ce5e7f3ad","locator":"2m9n9","accessionNumber":"0003003396-26-000002","mode":"TEST","status":"RECEIVED","transmissionStatus":"RECEIVED"}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '172'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2026 21:26:47 GMT
+      Expires:
+      - Wed, 20 May 2026 21:26:47 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - 98c5710e8d00ab009c66b731d5332b2d=dc1a9684000218320d9e7a4d09a3b0ed; path=/;
+        HttpOnly; Secure; SameSite=Strict
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains ; preload
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - 98c5710e8d00ab009c66b731d5332b2d=dc1a9684000218320d9e7a4d09a3b0ed
+      Host:
+      - api-bravo.edgarfiling.sec.gov
+      User-Agent:
+      - python-httpx/0.28.1
+      authorization:
+      - Bearer REDACTED
+    method: GET
+    uri: https://api-bravo.edgarfiling.sec.gov/submission/0003003396-26-000002/status
+  response:
+    body:
+      string: '{"tracking":"ad56f53b7bb7b34572eb62770201ae55","locator":"2m9n9","documentCount":0,"items":[],"accessionNumber":"0003003396-26-000002","mode":"TEST","status":"PROCESSING","final":false,"submissionProcessingStatus":"PROCESSING"}'
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '227'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2026 21:26:47 GMT
+      Expires:
+      - Wed, 20 May 2026 21:26:47 GMT
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains ; preload
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - 98c5710e8d00ab009c66b731d5332b2d=dc1a9684000218320d9e7a4d09a3b0ed
+      Host:
+      - api-bravo.edgarfiling.sec.gov
+      User-Agent:
+      - python-httpx/0.28.1
+      authorization:
+      - Bearer REDACTED
+    method: GET
+    uri: https://api-bravo.edgarfiling.sec.gov/submission/0003003396-26-000002/status
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAI1Wa2+rSBL9K5Y/37tq8CMh0nwwT0MMBOhubFajFa8AoYGsDXbwaP77VuMkN7N3
+        ZjSWW4bqep463a7f5v0xTuuqLeYP83uU3eXSWkqzVXx/ly3Xd1meZ9JigZbiPRIW829z1qVx3x1B
+        WWykVgJJ1qVDk7e90g1tP39A3+bHPM2rc56pcZ9zRSSuv6PVdxFh4e5BXD8s4XX5gBAYn4bTa95m
+        f6N796nbdn31XEH4qmtBlSxoFTf0JVO7gggUE426vkY1U4ueSI0KqjPPD2SK697FQuaaSnGx1c11
+        Wtda3GET1obLLnZVO0rtl5lB1qZqXnZEKPMAjbZqiqaqLdwXU1S9zlGYb4JPA6M3G3xauE55bAUT
+        hgliT7iSTY/ahVdTHZ4xpY7nk5XmE6/wWF1QrdRNnQxkXBYEUZVSy6Ia08koy7j2Cp+WaqDpro8I
+        5OM8YSJYRHAsjJbDFL/+UhvuClPZFKZO3QCtniha3t6/rg16JDVVfcJCnoOv6YTb2S+bHof6CjC4
+        2C+Hwsbpmv9ymw8sCSKf+iAfbUVwDvu6B9vRqTZvzrUbnQI9Uo1iqshGQN44HmvuIyQU/5TL+/KQ
+        5Po1CwAz1x9lFQty5Fayiy/oUfVeZQ85+nvNBWYAYE0Dt9r8de+KyY7H101tBclbOqlK/IgBrwpi
+        qtoA8nPSkOFLDwHvFfXI5Us+OgmI5JqaT2Ff86ivT1yqZC0RnaOpOyhtKMsUmUR7B8Xhqt0pshqQ
+        UzHlceXLXjmVbJER8lSExyxc3vAaAb+X7mIrS0eZMCtBB/hBLCegDp7i6o6JBWr7iqxA/MAPBEJq
+        HfogWFT3dZBbwCl4tgvgFAmopVO9LjwSEZ+aBeS/C8hqa+pQn3frO0aC88k/JAVcBnx7wsz+isUf
+        ePp/fFbfcwJfK+JBz0xN13yNTVhx/HxqBViw8O7WB50wEzggw6/1RJjE7bSA+ryfwF8B+1fgE5xT
+        H+mBaazOpvEGvclYWsnlQXRYuvWvH/vYYEM8ytcstPp471zjUBrSUS75Sir5HDXR60FkZQK8ihp2
+        4j0xjeicVptb7znnNHhvEHDcMXaV7CUGLVORFNDLJtqbRWbcwyrZZ05a9Ao6o6kJZdLSyXciLovY
+        kBbm1j+bW0c4NMIr8MBIFlbPz9gHt6cYgAPWJBU4W2ANOB7ILiWCAj2Cu2Uz9X8XoP6fLTgXgm95
+        cBb/uQ3qb3fFB8bsahq6eAjZ6RBapyiQUTLKYxQ6LN5HDPaGSJEvaSO9AK9Bl9fPhmhhF1FrnZNg
+        I7ovm4tpaEMSLCe8bLxZA+eLVFn1gKl+gPMQ7a0BuPeahPzuEqCnPtyhMoq31jkLsw5wHeOQyy5F
+        tC8hlowgFosA60N44fiepv29PXz2QHeEdCuf09Yr0oVfRs2hOOwt9lM9cHdAP6+pIfFabvXtdYGf
+        U+BKkyxMsAP+wPshXL2ATQP19qZaT3UcgqkOsNsI7ot9MbebqVY/1K8Z5AFcI3EoAEd+rovfPWnD
+        argbT6ZBlweRXoAbTRT6LG10kJVnwBP22fX9jHxyMGsY5OT9kX8KKvh/WxIydMPh1otMpFVq6C3k
+        XoJ/7BN7iERJNLeXP9WHOEm89VG6tde7UVpki3RIRfqya7JzVknvZ8rrP85NKiDINRoTEUGsEs5V
+        UeShJJgG/y/kfImgHjoceN5/e14uP7inrVgGuQDmNdwbQ9JIQtI4LAnpkG3tk6mV52yE+3WULetD
+        z5BQzP1tLZaKkpCCfjoup/MMvP4FJoGqz5vT/OHfv36bx2man04wEThDk+R8LkEILeC7kNbf+SzB
+        PyLYNF3GBwysBZjPHX3cD+BiHpDgSXNUTQXhc3ds8PjK1Yjz6Lihw4VVG7P5Q38ccj6uJE01hbMh
+        alzkPIvf5vnx2B0/Eljcr6ehKMj/O+RtmoN8mopY1eYfOu+v7vPzKb/NTGnX9vkbPMOY0+YQd/K5
+        i5Mcgs8133f9/yiuo5rYdHla/S3PaWP+bs7Hr7mmGht/1nYz1rVFfpxxgF7702yS76q2nv0o4jSL
+        4dvOumeYq6qYzWbPFeRVzACJmQ5ozISF/q/ZE8vjUz475s/gr+9mfZnf3M30ioHIjtuBG3ftrOwu
+        XGMK0f9wMf/916/gPR27qWttEfzch9//B06mqfKTCgAA
+    headers:
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1629'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2026 21:26:49 GMT
+      Expires:
+      - Wed, 20 May 2026 21:26:49 GMT
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains ; preload
+      Vary:
+      - Accept-Encoding
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1

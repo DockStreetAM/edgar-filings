@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+.env.local
+.python-version
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+*.swp
+*.swo
+tests/integration/cassettes/*.real.yaml
+# Safari .webarchive copies of public SEC pages — bulky, redundant with the
+# openapi.json / edgar-api.pdf already in docs/. Keep local for reference.
+docs/*.webarchive
