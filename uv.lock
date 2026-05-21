@@ -7,12 +7,12 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-05-12T17:07:18.609543Z"
+exclude-newer = "2026-05-14T00:05:04.853781Z"
 exclude-newer-span = "P7D"
 
 [options.exclude-newer-package]
-orionapi = { timestamp = "2026-05-19T17:07:18.610385Z", span = "PT0S" }
-wealthbox = { timestamp = "2026-05-19T17:07:18.609665Z", span = "PT0S" }
+orionapi = { timestamp = "2026-05-21T00:05:04.853789Z", span = "PT0S" }
+wealthbox = { timestamp = "2026-05-21T00:05:04.853785Z", span = "PT0S" }
 
 [[package]]
 name = "annotated-types"
@@ -126,7 +126,7 @@ wheels = [
 
 [[package]]
 name = "edgar-filings"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "httpx" },

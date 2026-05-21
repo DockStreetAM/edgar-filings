@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "edgar-filings"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python client for the SEC EDGAR filing APIs (filer management, submissions, submission status)."
 readme = "README.md"
 license = { file = "LICENSE" }

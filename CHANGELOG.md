@@ -6,6 +6,23 @@ follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning is
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-05-20
+
+### Added
+- `py.typed` marker (PEP 561) — downstream `mypy` and `pyright` now see the
+  type hints shipped with the package. Without this marker, type checkers
+  treat the package as untyped regardless of the actual hints in the source.
+
+### Internal (no user-visible change)
+- CI matrix expanded to Ubuntu + macOS + Windows × Python 3.10–3.13.
+- GitHub Actions bumped to Node 24 compatible majors (`actions/checkout@v6`,
+  `astral-sh/setup-uv@v8.1.0`).
+- Dependabot config added for weekly action and Python dep bumps.
+- `CONTRIBUTING.md` added.
+- Integration-test fixture now uses the `Client` context manager, removing a
+  spurious `ResourceWarning` during teardown.
+- CI integration step no longer swallows failures via `|| true`.
+
 ## [0.1.0] - 2026-05-20
 
 Initial release. Published to PyPI as `edgar-filings`.
@@ -27,10 +44,9 @@ Initial release. Published to PyPI as `edgar-filings`.
 - Typed exception hierarchy mapping HTTP error responses to `AuthError`,
   `EdgarValidationError`, `EdgarServerError`. Every exception carries the
   `tracking` and `locator` identifiers EDGAR returns.
-- `py.typed` marker (PEP 561) so downstream `mypy` / `pyright` see our type hints.
 - 47 tests (44 unit + 3 VCR-replay integration). Cassettes scrub both the
   Authorization header and the CCC inside submission XML bodies.
-- GitHub Actions CI on Python 3.10–3.13 across Ubuntu, macOS, Windows.
+- GitHub Actions CI on Python 3.10–3.13.
 - Release workflow using PyPI Trusted Publishing (OIDC, no long-lived tokens).
 
 ### Known limitations
